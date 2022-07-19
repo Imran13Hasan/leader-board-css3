@@ -4,6 +4,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
+    margin: 0;
+    padding: 0;
 }
 
 main {
@@ -26,10 +28,50 @@ hr {
 }
 
 /*---------------------
+    navbar styles 
+ ----------------------*/
+
+.navbar {
+    height: 94px;
+    width: 100%;
+    background-color: #562EFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 51px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    margin-right: 36px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+
+/*---------------------
     top-players styles 
  ----------------------*/
 .top-players {
-    margin-bottom: 30px;
+    margin: 20px;
 }
 
 .section-title {
@@ -171,8 +213,8 @@ hr {
 
 @media only screen and (max-width: 992px) {
     .container {
-        width: 100%;
-        margin: 0;
+        width: 85%;
+        margin-bottom: 20px;
     }
 
     .players,
@@ -199,6 +241,8 @@ hr {
     .blog {
         box-shadow: 0px 5.34229px 13.3557px rgb(0 0 0 / 5%);
         border-radius: 10px;
+        padding: 10px;
+        width: 70%;
     }
 
     .courses {
@@ -214,10 +258,17 @@ hr {
     Media Queries for Phone
  ----------------------------*/
 @media only screen and (max-width: 688px) {
+    .navbar {
+        height: 150px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
     .container {
-        width: 100%;
-        margin: 0;
-        padding: 0;
+        width: 85%;
+        margin-bottom: 20px;
     }
 
     .players,
@@ -244,6 +295,7 @@ hr {
     .blog {
         margin-top: 10px;
         padding: 10px;
+        width: 80%;
     }
 
     .courses {
@@ -251,7 +303,4 @@ hr {
         justify-items: center;
     }
 
-    .course {
-        width: 70%;
-    }
 }
